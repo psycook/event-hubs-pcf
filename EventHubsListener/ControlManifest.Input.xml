@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="smc" constructor="EventHubsListener" version="0.0.1" display-name-key="EventHubsListener" description-key="EventHubsListener description" control-type="standard" >
+
+    <external-service-usage enabled="false">
+    </external-service-usage>
+
+    <property name="connectionString" display-name-key="Connection String" description-key="The Azure Event Hubs connection string" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="eventHubName" display-name-key="Event Hub Name" description-key="The Azure Event Hubs name" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="consumerGroup" display-name-key="Consumer Group" description-key="The Azure Event Hubs consumer group" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="eventBody" display-name-key="Event Body" description-key="The body of the latest event" of-type="SingleLine.Text" usage="output" required="true" />
+
+    <resources>
+      <code path="index.ts" order="1"/>
+
+    </resources>
+
+  </control>
+</manifest>
